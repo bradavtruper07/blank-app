@@ -3,3 +3,7 @@ pandas
 plotly
 geopandas
 openpyxl
+folium
+st_folium
+seaborn
+matplotlib
