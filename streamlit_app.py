@@ -1,6 +1,3 @@
-# 🎈 Risk load Project
-pip install plotly
-pip install geopandas
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -21,9 +18,9 @@ st.title("Dashboard Exploratorio: Risk Load - GLM Tarificación")
 def load_data():
     df = pd.read_excel("base_agrup.xlsx", sheet_name="kmeans_com_ward")
     # Variables agrupadas de interés
-    grp_vars = ["numst_group", "year_band", "cluster_geo", "occtype_grp_w"]
+    grp_vars = ["numst_group", "year_band", "cluster_geo"]
     # Eliminar columnas irrelevantes
-    cols_drop = ["accgrpid", "streetname", "addrmatch", "numstories", "year_built", "region", "occtype"]
+    cols_drop = ["accgrpid", "streetname", "addrmatch", "numstories", "year_built", "occtype"]
     df = df.drop(columns=[c for c in cols_drop if c in df.columns])
     return df
 
